@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papeleria Arcoiris</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <header class="main-header header-gradient">
+        <nav class="main-nav">
+
+            <div class="nav-left">
+                <a href="#" class="logo-link">
+                    <div class="logo-icon-container">
+                        <img src="./img/arcoiris-logo.svg" alt="Logo Papelería" class="logo-image">
+                    </div>
+                    <div>
+                        <div class="text-logo-title">Papelería Arcoíris</div>
+                        <div class="text-logo-subtitle">Sistema de Punto de Venta</div>
+                    </div>
+                </a>
+
+                <div class="nav-tabs-container">
+                    <a href="#" class="text-nav-item nav-tab-item">
+                        <img src="./img/punto-venta.svg" alt="Ícono Punto de Venta" class="icon-sm">
+                        <span>Punto de Venta</span>
+                    </a>
+                    <a href="#" class="text-nav-item nav-tab-item nav-tab-item--active">
+                        <img src="./img/empleados.svg" alt="Ícono Empleados" class="icon-sm">
+                        <span>Empleados</span>
+                        <span class="text-nav-badge nav-notification">●</span>
+                    </a>
+                    <a href="#" class="text-nav-item nav-tab-item">
+                        <img src="./img/box.svg" alt="Ícono Inventario" class="icon-sm">
+                        <span>Inventario</span>
+                    </a>
+                    <a href="#" class="text-nav-item nav-tab-item">
+                        <img src="./img/stadistic.svg" alt="Ícono Reportes" class="icon-sm">
+                        <span>Reportes</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <div class="time-date-block">
+                    <div class="text-time font-cousine">
+                        <img src="./img/reloj.svg" alt="Ícono Reloj" class="icon-sm">
+                        <span>10:16 p.m.</span>
+                    </div>
+                    <div class="text-date">
+                        sábado, 25 de octubre de 2025
+                    </div>
+                </div>
+                <div class="user-info-block">
+                    <div class="user-avatar-wrapper">
+                        <div class="text-user-emoji"></div>
+                        <span class="user-status-dot"></span>
+                    </div>
+                    <div>
+                        <div class="text-user-name">Administrador Sistema</div>
+                        <div class="text-user-role">Administrador</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="filter-section">
+            <div class="filter-header">
+                <div class="filter-title-group">
+                    <div class="filter-icon-wrapper">
+                        <img src="./img/empleados.svg" alt="Gestión de Empleados" class="icon-lg">
+                    </div>
+                    <div>
+                        <h1 class="filter-title">Gestión de Empleados</h1>
+                        <p class="filter-subtitle">Administra el personal de la papelería</p>
+                    </div>
+                </div>
+                <a href="#" class="filter-button-new">
+                    <img src="./img/cruz.svg" alt="Nuevo" class="icon-sm">
+                    <span>Nuevo Empleado</span>
+                </a>
+            </div>
+
+            <div class="filter-controls">
+                <div class="filter-search-wrapper">
+                    <input type="text" placeholder="Buscar empleados..." class="filter-search-input">
+                    <img src="./img/lupa.svg" alt="Buscar" class="filter-search-icon icon-sm">
+                </div>
+                <button class="filter-dropdown-button">
+                    <span>Todos los roles</span>
+                    <img src="./img/despliegue.svg" alt="Desplegar" class="icon-sm">
+                </button>
+                <button class="filter-dropdown-button">
+                    <span>Todos</span>
+                    <img src="./img/despliegue.svg" alt="Desplegar" class="icon-sm">
+                </button>
+            </div>
+        </section>
+
+        <section class="employee-grid">
+
+            <article class="employee-card employee-card--active">
+                <div class="card__header">
+                    <div class="card__person">
+                        <div class="card__avatar" style="background-color: #F3E8FF;">
+                            <img src="./img/user.svg" alt="Avatar" class="icon-xl">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__name">Ana García Martínez</h3>
+                            <span class="card__id">ID: EMP-001</span>
+                        </div>
+                    </div>
+                    <img src="./img/user_green.svg" alt="Status" class="card__status-icon icon-xl">
+                </div>
+
+                <div class="card__body">
+                    <div class="card__tags">
+                        <span class="card__tag card__tag--admin">Administrador</span>
+                        <span class="card__tag card__tag--active">Activo</span>
+                    </div>
+                    <div class="card__details">
+                        <div class="card__detail-item">
+                            <img src="./img/correo.svg" alt="Email" class="icon-sm">
+                            <span>ana.garcia@papeleriaarcoiris.com</span>
+                        </div>
+                        <div class="card__detail-item">
+                            <img src="./img/telefono.svg" alt="Teléfono" class="icon-sm">
+                            <span>555-0123</span>
+                        </div>
+                        <div class="card__detail-item">
+                            <img src="./img/calendario.svg" alt="Fecha" class="icon-sm">
+                            <span>14/1/2023</span>
+                        </div>
+                        <div class="card__detail-item">
+                            <img src="./img/salario.svg" alt="Salario" class="icon-sm">
+                            <span>$5,000 MXN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card__divider"></div>
+
+                <div class="card__footer">
+                    <div class="card__actions">
+                        <button class="card__button card__button--edit">
+                            <img src="./img/edit.svg" alt="Editar" class="icon-sm">
+                            <span>Editar</span>
+                        </button>
+                        <button class="card__button card__button--deactivate">
+                            <img src="./img/user_red.svg" alt="Desactivar" class="icon-sm">
+                            <span>Desactivar</span>
+                        </button>
+                    </div>
+                    <button class="card__button card__button--delete">
+                        <img src="./img/eliminar.svg" alt="Borrar" class="icon-md">
+                    </button>
+                </div>
+            </article>
+
+            <article class="employee-card">
+                <div class="card__header">
+                    <div class="card__person">
+                        <div class="card__avatar" style="background-color: #E0E7FF;">
+                            <img src="./img/user.svg" alt="Avatar" class="icon-xl">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__name">Carlos Rodríguez López</h3>
+                            <span class="card__id">ID: EMP-002</span>
+                        </div>
+                    </div>
+                    <img src="./img/user_green.svg" alt="Status" class="card__status-icon icon-xl">
+                </div>
+
+                <div class="card__body">
+                    <div class="card__tags">
+                        <span class="card__tag card__tag--cajero">cajero</span>
+                        <span class="card__tag card__tag--active">Activo</span>
+                    </div>
+                    <div class="card__details">
+                        <div class="card__detail-item">
+                            <img src="./img/correo.svg" alt="Email" class="icon-sm">
+                            <span>carlos.rodriguez@papeleriaarcoiris.com</span>
+                        </div>
+                        <div class="card__detail-item">
+                            <img src="./img/telefono.svg" alt="Teléfono" class="icon-sm">
+                            <span>555-0154</span>
+                        </div>
+                        <div class="card__detail-item">
+                            <img src="./img/calendario.svg" alt="Fecha" class="icon-sm">
+                            <span>28/2/2023</span>
+                        </div>
+                        <div class="card__detail-item">
+                            <img src="./img/salario.svg" alt="Salario" class="icon-sm">
+                            <span>$3,000 MXN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card__divider"></div>
+                <div class="card__footer">
+                    <div class="card__actions">
+                        <button class="card__button card__button--edit">
+                            <img src="./img/edit.svg" alt="Editar" class="icon-sm">
+                            <span>Editar</span>
+                        </button>
+                        <button class="card__button card__button--deactivate">
+                            <img src="./img/user_red.svg" alt="Desactivar" class="icon-sm">
+                            <span>Desactivar</span>
+                        </button>
+                    </div>
+                    <button class="card__button card__button--delete">
+                        <img src="./img/eliminar.svg" alt="Borrar" class="icon-md">
+                    </button>
+                </div>
+                <div class="card__footer">
+                </div>
+            </article>
+
+            <article class="employee-card">
+                <div class="card__header">
+                    <div class="card__person">
+                        <div class="card__avatar" style="background-color: #F3E8FF;">
+                            <img src="./img/user.svg" alt="Avatar" class="icon-xl">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__name">María Elena Vázquez</h3>
+                            <span class="card__id">ID: EMP-003</span>
+                        </div>
+                    </div>
+                    <img src="./img/user_green.svg" alt="Status" class="card__status-icon icon-xl">
+                </div>
+                <div class="card__body">
+                    <div class="card__tags">
+                        <span class="card__tag card__tag--cajero">cajero</span>
+                        <span class="card__tag card__tag--active">Activo</span>
+                    </div>
+                    <div class="card__details">
+                        <div class="card__detail-item">
+                            <img src="./img/correo.svg" alt="Email" class="icon-sm">
+                            <span>maria.elena@papeleriaarcoiris.com</span>
+                        </div>
+                        <div class="card__detail-item">
+                            <img src="./img/telefono.svg" alt="Teléfono" class="icon-sm">
+                            <span>555-2532</span>
+                        </div>
+                        <div class="card__detail-item">
+                            <img src="./img/calendario.svg" alt="Fecha" class="icon-sm">
+                            <span>20/3/2023</span>
+                        </div>
+                        <div class="card__detail-item">
+                            <img src="./img/salario.svg" alt="Salario" class="icon-sm">
+                            <span>$3,000 MXN</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card__divider"></div>
+                <div class="card__footer">
+                    <div class="card__actions">
+                        <button class="card__button card__button--edit">
+                            <img src="./img/edit.svg" alt="Editar" class="icon-sm">
+                            <span>Editar</span>
+                        </button>
+                        <button class="card__button card__button--deactivate">
+                            <img src="./img/user_red.svg" alt="Desactivar" class="icon-sm">
+                            <span>Desactivar</span>
+                        </button>
+                    </div>
+                    <button class="card__button card__button--delete">
+                        <img src="./img/eliminar.svg" alt="Borrar" class="icon-md">
+                    </button>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
