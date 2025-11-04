@@ -1,0 +1,221 @@
+html,
+body {
+  margin: 0; /* 1. Quita los márgenes por defecto */
+  padding: 0; /* 2. Quita el relleno por defecto */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  background: linear-gradient(135deg, #f8fafe, #c4e1f2 50%, #57b7f2);
+  background-repeat: no-repeat;
+}
+
+.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 26.25px;
+  color: #1154d9;
+  font-family: Arimo;
+}
+.container {
+  height: 692.3px;
+  width: 392px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+.login-container {
+  align-self: stretch;
+  height: 189px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container-icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.heading-2 {
+  margin-top: 11px;
+  height: 31.5px;
+}
+.papeleria-arcoris {
+  font-weight: 700;
+  line-height: 31.5px;
+}
+.paragraph {
+  height: 24.5px;
+  font-size: 15.75px;
+  color: #64748b;
+}
+.sistema-de-punto {
+  line-height: 24.5px;
+}
+.card {
+  align-self: stretch;
+  height: auto;
+  position: relative;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border-radius: 12.75px;
+  background-color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
+}
+.cardtitle {
+  height: 17.5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 15px;
+}
+.icon {
+  height: 17.5px;
+  width: 17.5px;
+  position: relative;
+}
+.iniciar-sesion {
+  line-height: 14px;
+}
+.cardcontent {
+  width: 100%;
+  height: 351px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 21px;
+  box-sizing: border-box;
+  gap: 21px;
+  text-align: left;
+  font-size: 12.25px;
+}
+.login2 {
+  align-self: stretch;
+  height: 203px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+.container2 {
+  align-self: stretch;
+  height: 50.8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.container3 {
+  align-self: stretch;
+  height: 31.5px;
+  position: relative;
+  color: #64748b;
+}
+.input {
+  border-radius: 6.75px;
+  background-color: #f3f3f5;
+  border: 1px solid #c4e1f2;
+  box-sizing: border-box;
+  width: 100%;
+  height: 31.5px;
+  padding: 3.5px 10.5px 3.5px 35px;
+}
+
+.login-icon {
+  position: absolute;
+  top: 7px;
+  left: 10.5px;
+  width: 17.5px;
+  height: 17.5px;
+}
+
+.eye-icon {
+    position: absolute;   /* Posiciona el ícono sobre el input */
+    right: 10px;          /* A 10px del borde derecho */
+    top: 50%;             /* Lo centra verticalmente */
+    transform: translateY(-50%);
+    cursor: pointer;      /* Cambia el cursor a una "manita" */
+    color: #aaa;
+}
+.container6 {
+  align-self: stretch;
+  height: 17.5px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+}
+.primitivebutton {
+  height: 14px;
+  width: 14px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  background-color: #f3f3f5;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.primitivelabel2 {
+  height: 17.5px;
+  width: 173.5px;
+  display: flex;
+  align-items: center;
+}
+.recordarme-en-este {
+  position: relative;
+  line-height: 17.5px;
+}
+.button {
+  align-self: stretch;
+  height: 42px;
+  position: relative;
+  border-radius: 6.75px;
+  border: 1px solid #0554f2;
+  background-color:  #0554f2;
+  color: #fff;
+}
+
+
+.rights-footer {
+    margin-top: 20px;
+  text-align: center;
+  height: 17.5px;
+  font-size: 12.25px;
+  color: #64748b;
+}
+
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+    height: auto;
+  }
+  
+  .container-icon {
+    width: 100px;
+    height: 100px;
+  }
+    .card {
+        height: auto;
+    }
+    
+    .input {
+        width: 100%;
+    }
+
+    .rights-footer {
+        text-align: center;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+}

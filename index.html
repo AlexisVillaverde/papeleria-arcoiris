@@ -1,11 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/principal.css" />
+    <link rel="icon" type="image/png" href="./public/images/logo.svg" />
+    <title>Papelería Arcoíris - Sistema de Punto de Venta</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bungee&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    
+    <div class="login">
+        <div class="container">
+            <div class="login-container">
+                <img class="container-icon" alt="Logo de la Papelería Arcoíris" src="./public/images/logo.svg">
+
+                <div class="heading-2">
+                    <h2 class="papeleria-arcoris">Papelería Arcoíris</h2>
+                </div>
+                <div class="paragraph">
+                    <div class="sistema-de-punto">Sistema de Punto de Venta</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardtitle">
+                    <img class="icon" alt="Icono de Iniciar Sesión" src="./public/images/icon-login.svg">
+                    <p class="iniciar-sesion">Iniciar Sesión</p>
+                </div>
+                <div class="cardcontent">
+                    <form class="login2" action="productos.html" method="GET">
+                        <div class="container2">
+                            <label for="user-input">Usuario</label>
+                            <div class="container3">
+                                <input type="text" name="user-input" id="user-input" class="input"
+                                    placeholder="Ingresa tu usuario">
+                                <img class="login-icon" alt="icono de usuario" src="./public/images/icon-user.svg">
+
+                            </div>
+                        </div>
+                        <div class="container2">
+                            <label for="password-input">Contraseña</label>
+                            <div class="container3">
+                                <input type="password" name="password-input" id="password-input" class="input"
+                                    placeholder="Ingresa tu contraseña">
+                                <img class="login-icon" alt="Icono de contraseña" src="./public/images/icon-lock.svg">
+
+                                <img class="eye-icon" alt="Icono de mostrar contraseña" src="./public/images/icon-eye.svg">
+
+                            </div>
+                        </div>
+                        <div class="container6">
+                            <div class="primitivebutton">
+                            </div>
+                            <div class="primitivelabel2">
+                                <div class="recordarme-en-este">Recordarme en este dispositivo</div>
+                            </div>
+                        </div>
+                         <input type="submit" class="button " value="Iniciar Sesión">                       
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <footer class="rights-footer">
+            © 2024 Papelería Arcoíris. Todos los derechos reservados.
+        </footer>
+    </div>
 </body>
+
 </html>

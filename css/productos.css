@@ -1,0 +1,703 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    /* Fuente base de Arimo */
+    font-family: 'Arimo', sans-serif;
+    background-color: #F3F4F6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh; /* 100% de la altura de la ventana */
+}
+
+.font-cousine {
+    font-family: 'Cousine', monospace;
+}
+
+/* Degradado de fondo específico para el header */
+.header-gradient {
+    background: linear-gradient(90deg, #EFF6FF 0%, #F0F9FF 100%);
+}
+
+.text-logo-title {
+    font-size: 17.5px;
+    line-height: 24.5px;
+    color: #1d4ed8;
+    font-weight: 700;
+}
+.text-logo-subtitle,
+.text-nav-item,
+.text-user-emoji {
+    font-size: 12.25px;
+    line-height: 17.5px;
+}
+.text-logo-subtitle {
+    color: #64748b;
+}
+
+.text-nav-badge {
+    font-size: 10.5px;
+    line-height: 14px;
+}
+.text-time {
+    font-size: 15.75px;
+    line-height: 24.5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    color: #1d4ed8;
+}
+.text-date {
+    font-size: 12.25px;
+    line-height: 17.5px;
+    color: #64748b;
+    text-transform: capitalize;
+}
+.text-user-name {
+    font-size: 14px;
+    line-height: 21px;
+    color: #1d4ed8;
+}
+.text-user-role {
+    font-size: 10.5px;
+    line-height: 14px;
+    color: #64748b;
+}
+
+
+.main-header {
+    width: 100%;
+    border-bottom: 1px solid #bae6fd;
+    padding: 14px 20px 4px 20px;
+}
+
+.main-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.logo-image {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-right {
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.time-date-block {
+
+    text-align: right;
+}
+
+.user-info-block {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar-wrapper {
+
+    position: relative;
+}
+
+
+
+.logo-icon-container {
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    border-radius: 0.5rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-tabs-container {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background-color: #bae6fd;
+    padding: 2px;
+    border-radius: 0.5rem; 
+}
+
+.nav-tab-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    border-radius: 0.375rem; 
+    color: #1d4ed8;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+.nav-tab-item:hover {
+    background-color: rgba(255,255,255, 0.4);
+}
+.nav-tab-item.nav-tab-item--active {
+    position: relative;
+    color: #fff;
+    background-color: #2563eb;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+.nav-tab-item.nav-tab-item--active:hover {
+    background-color: #1d4ed8;
+}
+
+
+.nav-notification {
+    background: #BAF241;
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 9999px;
+    color: #1d4ed8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-user-emoji {
+    width: 28px;
+    height: 28px;
+    background-color: #bae6fd;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-status-dot {
+    border-width: 2px;
+    width: 10.5px;
+    height: 10.5px;
+    background: #00C950;
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    border-color: #fff;
+    border-radius: 9999px;
+}
+
+.main-category {
+    height: 100%;
+    display: flex;
+}
+
+.category{
+    width:15%;
+}
+
+.categories-title {
+    display: flex;
+    align-items: center;
+    padding: 14px 14px 14px 14px ;
+    border: 1px solid #C4E1F2;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1d4ed8;
+}
+
+.container {
+    height: 100%;
+  	position: relative;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 7px 7px 0px;
+  	box-sizing: border-box;
+  	gap: 3.5px;
+  	text-align: left;
+  	font-size: 12.25px;
+  	color: #1154d9;
+  	font-family: Arimo;
+    border-right: 1px solid #C4E1F2;
+}
+
+.button2{ 
+    width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    padding: 7px 14px;
+    box-sizing: border-box;
+    padding: 5.25px 10.5px;
+    gap: 17px;
+}
+.productossidebar {
+    height: 17.5px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    box-sizing: border-box;
+    gap: 7px;
+    
+}
+.button2--active {
+    color: #fff;
+    border-radius: 6.75px;
+    background-color: #2563eb;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.button2--active .productos-total {
+    color: #fff;
+}
+
+.productos-total {
+    color: #64748B;
+    font-size: 10.5px;
+    font-weight: 400;
+}
+
+
+/* --- Contenedor Principal productos --- */
+.main-products {
+    width: 60%;
+    padding: 20px; 
+    background-color: #fff; 
+}
+
+.filter-search-wrapper {
+    position: relative; 
+    width: 100%;
+    margin-bottom: 16px; 
+}
+
+.filter-search-icon {
+    position: absolute; 
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px; 
+    height: 18px;
+    opacity: 0.5; 
+}
+
+.filter-search-input {
+    width: 100%;
+    height: 48px; 
+    border: 1px solid #c4e1f2; 
+    border-radius: 8px;
+    font-size: 1rem;
+    padding-left: 40px;
+    padding-right: 12px;
+    outline: none; 
+}
+.filter-search-input:focus {
+    border-color: #0554f2; 
+    box-shadow: 0 0 0 2px rgba(5, 84, 242, 0.2);
+}
+
+
+.filters-container {
+    gap: 12px; 
+    flex-wrap: wrap; 
+}
+
+.filters{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.filter-item,
+.filter-dropdown-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid #c4e1f2;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #1154d9;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.filter-item:hover,
+.filter-dropdown-button:hover {
+    background-color: #f8fafe; 
+}
+
+/* Para el botón desplegable "A-Z" */
+.filter-dropdown-button {
+    color: #333; 
+}
+
+select{
+    border: none;
+    font-size: 0.9rem;
+    background: transparent;
+    padding-right: 20px; 
+}
+
+select:focus {
+    outline: none;
+}
+
+
+/* --- Textos de Info --- */
+.product-count {
+    font-size: 0.9rem;
+    color: #64748b; 
+    margin-left: auto; 
+}
+
+.type-category {
+    font-size: 0.85rem;
+    color: #0554f2; 
+    background-color: #eff6ff; 
+    border: 1px solid #c4e1f2;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.products-grid {
+    
+    gap: 14px;
+    padding:14px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* <-- AÑADIDO */
+}
+
+.product-card {
+    border: 1px solid #c4e1f2; 
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #fff;
+    color: #1154D9;
+
+
+}
+.product-image {
+    width: 42px;
+    height: 42px; 
+    object-fit: contain; 
+    border: 1px solid #c4e1f2; 
+    padding: 8px;
+}
+
+.product-info{
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0554f2; 
+}
+
+.product-stock-status {
+    width: fit-content;
+    padding: 7px;
+    font-size: 0.8rem;
+    color: #008236;
+    border-radius: 33554400px;
+    background: #DCFCE7;
+}
+
+.add-to-cart-button {
+    background-color: #0554f2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.main-venta{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    border-left: 1px solid #c4e1f2;
+    padding: 21px; 
+    background-color: #F8FAFE; 
+}
+
+.header-venta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 21px;
+    justify-content: space-between;
+}
+
+.header-title-venta {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    color: #1d4ed8;
+    margin-left: 12px;
+}
+
+.venta-items-count{
+    border-radius: 6.75px;
+border: 1px solid rgba(0, 0, 0, 0.00);
+background: #BAF241;
+padding: 1.75px 7px;
+color: #1154D9;
+}
+
+.list-items-venta{
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #F8FAFE;
+}
+
+.sale-card{
+    color: #1154D9;
+    display: flex;
+    flex-direction: column;
+    padding: 11.5px 11.5px 1px 11.5px;
+    border-radius: 8.75px;
+    border: 1px solid #C4E1F2;
+    background: #FFF;
+}
+
+.product-info-venta, .sell-info-product{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.remove-product-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-button{
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    color: #1154D9;
+    border-radius: 6.75px;
+border: 1px solid #57B7F2;
+background: #FFF;
+}
+
+.price-subtotal-container{
+    display: flex;
+    gap: 10px ;
+    flex-direction: column;
+}
+
+.total-venta{
+    display: flex;
+    color: #1154D9;
+    justify-content: space-between;
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+
+.complete-sale-button{
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    background: #0554F2;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.subtotal-venta,.iva-venta{
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+
+.limpiar-venta-button,.guardar-venta-button{
+    width: 48%;
+    height: 40px;
+    margin: 10px 0px 21px 0px;
+    border-radius: 8px;
+    background: #f8fafe;
+    color: #1D4ED8;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #57B7F2;
+
+
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    
+    /* Ocultamos la barra de categorías de la izquierda */
+    .category {
+        display: none;
+    }
+
+    /* Ajustamos los anchos de las dos columnas restantes */
+    .main-products {
+        width: 65%; /* Más ancho */
+    }
+    .main-venta {
+        width: 35%;
+    }
+
+    /* Reducimos la cuadrícula de productos a 3 columnas */
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Ocultamos los botones de navegación en el header 
+       para dar espacio. En un futuro, aquí iría un "menú hamburguesa" */
+    .nav-tabs-container {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    /* --- Arreglos de Layout Principal --- */
+    
+    /* Dejamos que el body vuelva a tener scroll */
+    body {
+        height: auto; 
+    }
+
+    /* Apilamos las 3 columnas principales verticalmente */
+    .main-category {
+        flex-direction: column;
+        height: auto; /* Dejamos que el contenido defina la altura */
+    }
+
+    /* Hacemos que todas las columnas ocupen el 100% del ancho */
+    .category,
+    .main-products,
+    .main-venta {
+        width: 100%;
+        height: auto; /* Altura automática */
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid #c4e1f2; /* Separador */
+    }
+
+    /* Mostramos la barra de categorías (que ocultamos en tablet) */
+    .category {
+        display: block;
+    }
+
+    /* --- Arreglos del Header --- */
+
+    /* Apilamos el contenido del header */
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .nav-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        width: 100%;
+    }
+    .nav-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav-tabs-container {
+        display: flex;
+        width: 100%;
+        overflow-x: auto; /* Hacemos que los tabs se deslicen horizontalmente */
+    }
+
+    /* --- Arreglos de Productos --- */
+
+    /* Reducimos la cuadrícula a 2 columnas */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Apilamos los filtros */
+    .filters-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .product-count {
+        margin-left: 0; /* Reseteamos el margen */
+    }
+
+    /* --- Arreglos de Venta --- */
+    .limpiar-venta-button,
+    .guardar-venta-button {
+        width: 49%; /* Hacemos que los botones ocupen casi la mitad */
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    
+    /* Cuadrícula de productos a 1 columna */
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ocultamos el subtítulo del logo */
+    .text-logo-subtitle {
+        display: none;
+    }
+
+    /* Apilamos la fecha y la info de usuario */
+    .nav-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
