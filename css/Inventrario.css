@@ -1,0 +1,1259 @@
+.dhanshree-stationery-e-commerc {
+  	width: 100%;
+  	height: 1514px;
+  	position: relative;
+  	background-color: #fff;
+  	text-align: left;
+  	font-size: 17.5px;
+  	color: #1154d9;
+  	font-family: Arimo;
+}
+.app {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #f9fafb;
+  	width: 100%;
+  	height: 550px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 0px 0px 0px;
+  	box-sizing: border-box;
+}
+
+/**/
+.posheader {
+  	width: 100%;
+  	height: 78px;
+  	background: linear-gradient(90deg, #eff6ff, #f0f9ff);
+  	border-bottom: 1px solid #c4e1f2;
+  	box-sizing: border-box;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 14px 21px 1px;
+	
+}.dhanshree-stationery-e-commerc-container {
+  	height: 42px;
+  	width: 194.3px;
+  	display: flex;
+  	align-items: center;
+  	gap: 14px;
+}
+.container {
+  	align-self: stretch;
+  	height: 49px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 7.1px;
+}
+
+.container-icon {
+  	height: 35px;
+  	width: 35px;
+  	border-radius: 8.75px;
+}
+.container2 {
+  	height: 42px;
+  	flex: 1;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.heading-1 {
+  	align-self: stretch;
+  	height: 24.5px;
+  	display: flex;
+  	align-items: flex-start;
+}
+.papelera-arcoris {
+  	position: relative;
+  	line-height: 24.5px;
+}
+.paragraph {
+  	align-self: stretch;
+  	height: 17.5px;
+  	display: flex;
+  	align-items: flex-start;
+  	font-size: 12.25px;
+  	color: #64748b;
+}
+.sistema-de-punto {
+  	position: relative;
+  	line-height: 17.5px;
+}
+.navigation {
+  	height: 35px;
+  	width: 454.9px;
+  	position: relative;
+  	border-radius: 8.75px;
+  	background-color: #c4e1f2;
+  	font-size: 12.25px;
+}
+.button {
+  	position: absolute;
+  	top: 3.5px;
+  	left: 3.5px;
+  	border-radius: 6.75px;
+  	width: 129.1px;
+  	height: 28px;
+}
+.icon {
+  	position: absolute;
+  	top: 7px;
+  	left: 8.75px;
+  	width: 14px;
+  	height: 14px;
+}
+.punto-de-venta {
+  	position: absolute;
+  	top: 3.25px;
+  	left: 35px;
+  	line-height: 17.5px;
+}
+.dhanshree-stationery-e-commerc-button {
+  	position: absolute;
+  	top: 3.5px;
+  	left: 139.56px;
+  	border-radius: 6.75px;
+  	width: 104.4px;
+  	height: 28px;
+}
+.button2 {
+  	position: absolute;
+  	top: 3.5px;
+  	left: 250.97px;
+  	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  	border-radius: 6.75px;
+  	background-color: #0554f2;
+  	width: 100.1px;
+  	height: 28px;
+  	color: #fff;
+}
+.badge {
+  	position: absolute;
+  	top: -3.5px;
+  	left: 86.13px;
+  	border-radius: 33554400px;
+  	background-color: #baf241;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	width: 17.5px;
+  	height: 17.5px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0px 3.5px;
+  	font-size: 10.5px;
+  	color: #1154d9;
+}
+.div {
+  	position: relative;
+  	line-height: 14px;
+}
+.button3 {
+  	position: absolute;
+  	top: 3.5px;
+  	left: 358.09px;
+  	border-radius: 6.75px;
+  	width: 93.3px;
+  	height: 28px;
+}
+.container3 {
+  	height: 49px;
+  	width: 398.5px;
+  	position: relative;
+  	text-align: center;
+  	font-size: 15.75px;
+  	font-family: Cousine;
+}
+.container4 {
+  	position: absolute;
+  	top: 3.5px;
+  	left: 0px;
+  	width: 173.5px;
+  	height: 42px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.container5 {
+  	align-self: stretch;
+  	height: 24.5px;
+  	display: flex;
+  	align-items: center;
+  	gap: 7px;
+}
+.icon4 {
+  	height: 14px;
+  	width: 14px;
+  	position: relative;
+}
+.text {
+  	height: 24.5px;
+  	width: 86.6px;
+  	position: relative;
+}
+.pm {
+  	position: absolute;
+  	top: 0px;
+  	left: -4px;
+  	line-height: 24.5px;
+}
+.dhanshree-stationery-e-commerc-paragraph {
+  	align-self: stretch;
+  	height: 17.5px;
+  	display: flex;
+  	align-items: flex-start;
+  	font-size: 12.25px;
+  	color: #64748b;
+  	font-family: Arimo;
+}
+.sbado-25-de {
+  	position: relative;
+  	line-height: 17.5px;
+  	text-transform: capitalize;
+}
+.button4 {
+  	position: absolute;
+  	top: 0px;
+  	left: 194.47px;
+  	border-radius: 6.75px;
+  	width: 204.1px;
+  	height: 49px;
+  	text-align: left;
+  	font-size: 14px;
+  	font-family: Arimo;
+}
+.dhanshree-stationery-e-commerc-posheader {
+  	position: absolute;
+  	top: 7px;
+  	left: 52.5px;
+  	width: 144.6px;
+  	height: 35px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.paragraph2 {
+  	align-self: stretch;
+  	height: 21px;
+  	position: relative;
+}
+.administrador-sistema {
+  	position: absolute;
+  	top: -1px;
+  	left: 0px;
+  	line-height: 21px;
+}
+.paragraph3 {
+  	align-self: stretch;
+  	height: 14px;
+  	display: flex;
+  	align-items: flex-start;
+  	font-size: 10.5px;
+  	color: #64748b;
+}
+.administrador {
+  	flex: 1;
+  	position: relative;
+  	line-height: 14px;
+}
+.posheader2 {
+  	position: absolute;
+  	top: 10.5px;
+  	left: 7px;
+  	width: 28px;
+  	height: 28px;
+  	font-size: 12.25px;
+}
+.primitivespan {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 33554400px;
+  	background-color: #c4e1f2;
+  	width: 28px;
+  	height: 28px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: flex-start;
+}
+.dhanshree-stationery-e-commerc-text {
+  	height: 28px;
+  	flex: 1;
+  	border-radius: 33554400px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+.container6 {
+  	position: absolute;
+  	top: 19.25px;
+  	left: 19.25px;
+  	border-radius: 33554400px;
+  	background-color: #00c950;
+  	border: 2px solid #fff;
+  	box-sizing: border-box;
+  	width: 10.5px;
+  	height: 10.5px;
+}
+
+
+
+.inventorymanagement {
+  	width: 100%;
+  	flex: 1;
+  	background-color: #f9fafb;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	font-size: 12.25px;
+  	color: #101828;
+}
+.container7 {
+  	width: 100%;
+  	height: 330.5px;
+  	background-color: #fff;
+  	border-bottom: 1px solid #e5e7eb;
+  	box-sizing: border-box;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 21px 21px 1px;
+  	gap: 21px;
+}
+.container8 {
+  	align-self: stretch;
+  	height: 49px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 20px;
+  	font-size: 21px;
+}
+.container9 {
+  	height: 49px;
+  	width: 258px;
+  	display: flex;
+  	align-items: center;
+  	gap: 10.5px;
+}
+.container10 {
+  	height: 49px;
+  	flex: 1;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.dhanshree-stationery-e-commerc-heading-1 {
+  	align-self: stretch;
+  	height: 28px;
+  	display: flex;
+  	align-items: flex-start;
+}
+.gestin-de-inventario {
+  	position: relative;
+  	line-height: 28px;
+}
+.paragraph4 {
+  	align-self: stretch;
+  	height: 21px;
+  	position: relative;
+  	font-size: 14px;
+  	color: #4a5565;
+}
+.container11 {
+  	height: 31.5px;
+  	width: 359.5px;
+  	display: flex;
+  	align-items: center;
+  	gap: 10.5px;
+  	font-size: 12.25px;
+  	color: #0a0a0a;
+}
+.button5 {
+  	height: 31.5px;
+  	width: 100.4px;
+  	position: relative;
+  	border-radius: 6.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+}
+.icon5 {
+  	position: absolute;
+  	top: 8.75px;
+  	left: 11.5px;
+  	width: 14px;
+  	height: 14px;
+}
+.importar {
+  	position: absolute;
+  	top: 5px;
+  	left: 39.5px;
+  	line-height: 17.5px;
+}
+.button6 {
+  	height: 31.5px;
+  	width: 98.4px;
+  	position: relative;
+  	border-radius: 6.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+}
+.button7 {
+  	height: 31.5px;
+  	flex: 1;
+  	position: relative;
+  	border-radius: 6.75px;
+  	background-color: #9810fa;
+  	color: #fff;
+}
+.icon7 {
+  	position: absolute;
+  	top: 8.75px;
+  	left: 10.5px;
+  	width: 14px;
+  	height: 14px;
+}
+.nuevo-producto {
+  	position: absolute;
+  	top: 5px;
+  	left: 38.5px;
+  	line-height: 17.5px;
+}
+.container12 {
+  	align-self: stretch;
+  	height: 82.5px;
+  	position: relative;
+  	color: #4a5565;
+}
+
+/**/
+
+.card {
+  	position: absolute;
+  	top: 0px;
+  	left: 0%;
+  	border-radius: 12.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	width: 20%;
+  	height: 82.5px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 14px 0px 0px 14px;
+}
+.dhanshree-stationery-e-commerc-inventorymanagement {
+  	width: 171.2px;
+  	height: 45.5px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 20px;
+}
+.container13 {
+  	height: 45.5px;
+  	width: 83.7px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.paragraph5 {
+  	align-self: stretch;
+  	height: 17.5px;
+  	display: flex;
+  	align-items: flex-start;
+}
+.paragraph6 {
+  	align-self: stretch;
+  	height: 28px;
+  	display: flex;
+  	align-items: flex-start;
+  	font-size: 21px;
+  	color: #0a0a0a;
+}
+.b {
+  	flex: 1;
+  	position: relative;
+  	line-height: 28px;
+}
+.icon8 {
+  	height: 28px;
+  	width: 28px;
+  	position: relative;
+}
+
+/**/
+.dhanshree-stationery-e-commerc-card {
+  	position: absolute;
+  	top: 0px;
+  	left: 21%;
+  	border-radius: 12.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	width: 19%;
+  	height: 82.5px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 14px 0px 0px 14px;
+}
+.container14 {
+  	height: 45.5px;
+  	width: 66.1px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.valor-total {
+  	flex: 1;
+  	position: relative;
+  	line-height: 17.5px;
+}
+.paragraph8 {
+  	align-self: stretch;
+  	height: 28px;
+  	position: relative;
+  	font-size: 21px;
+  	color: #0a0a0a;
+}
+.dhanshree-stationery-e-commerc-b {
+  	position: absolute;
+  	top: -2px;
+  	left: 0px;
+  	line-height: 28px;
+  	display: inline-block;
+  	width: 67px;
+}
+.card2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 41%;
+  	border-radius: 12.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	width: 19%;
+  	height: 82.5px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 14px 0px 0px 14px;
+}
+.container15 {
+  	height: 45.5px;
+  	width: 58.7px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.card3 {
+  	position: absolute;
+  	top: 0px;
+  	left: 61%;
+  	border-radius: 12.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	width: 19%;
+  	height: 82.5px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 14px 0px 0px 14px;
+}
+.container16 {
+  	height: 45.5px;
+  	width: 56px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.paragraph12 {
+  	align-self: stretch;
+  	height: 28px;
+  	display: flex;
+  	align-items: flex-start;
+  	font-size: 21px;
+  	color: #d08700;
+}
+.card4 {
+  	position: absolute;
+  	top: 0px;
+  	left: 81%;
+  	border-radius: 12.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	width: 19%;
+  	height: 82.5px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 14px 0px 0px 14px;
+}
+.container17 {
+  	height: 45.5px;
+  	width: 52.3px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.paragraph14 {
+  	align-self: stretch;
+  	height: 28px;
+  	display: flex;
+  	align-items: flex-start;
+  	font-size: 21px;
+  	color: #e7000b;
+}
+.alert {
+  	align-self: stretch;
+  	height: 61.5px;
+  	position: relative;
+  	border-radius: 8.75px;
+  	background-color: #fefce8;
+  	border: 1px solid #fff085;
+  	box-sizing: border-box;
+  	color: #894b00;
+}
+.icon13 {
+  	position: absolute;
+  	top: 13.25px;
+  	left: 15px;
+  	width: 14px;
+  	height: 14px;
+}
+.alertdescription {
+  	position: absolute;
+  	top: 11.5px;
+  	left: 39.5px;
+  	width: 1007.5px;
+  	height: 38.5px;
+}
+.inventorymanagement6 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 7px;
+  	height: 17.5px;
+  	display: flex;
+  	align-items: flex-start;
+}
+.productos-tienen-stock {
+  	position: absolute;
+  	top: 19px;
+  	left: 0px;
+  	line-height: 17.5px;
+}
+.container18 {
+  	align-self: stretch;
+  	height: 31.5px;
+  	position: relative;
+  	color: #0a0a0a;
+}
+.primitivebutton {
+  	position: absolute;
+  	top: 0px;
+  	left: 614px;
+  	border-radius: 6.75px;
+  	background-color: #f3f3f5;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	width: 168px;
+  	height: 31.5px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	padding: 0px 10.5px;
+  	gap: 20px;
+}
+.dhanshree-stationery-e-commerc-primitivespan {
+  	height: 17.5px;
+  	width: 107.7px;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: center;
+}
+.icon14 {
+  	height: 14px;
+  	width: 14px;
+  	position: relative;
+  	opacity: 0.5;
+}
+.dhanshree-stationery-e-commerc-primitivebutton {
+  	position: absolute;
+  	top: 0px;
+  	left: 796px;
+  	border-radius: 6.75px;
+  	background-color: #f3f3f5;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	width: 126px;
+  	height: 31.5px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	padding: 0px 10.5px;
+  	gap: 17.8px;
+}
+.primitivespan2 {
+  	height: 17.5px;
+  	width: 71.2px;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: center;
+}
+.primitivebutton2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 91%;
+  	border-radius: 6.75px;
+  	background-color: #f3f3f5;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	width: 126px;
+  	height: 31.5px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	padding: 0px 10.5px;
+  	gap: 20px;
+}
+.primitivespan3 {
+  	height: 17.5px;
+  	width: 44.8px;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: center;
+}
+.container19 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 600px;
+  	height: 31.5px;
+  	color: #64748b;
+}
+.input {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 6.75px;
+  	background-color: #f3f3f5;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	width: 600px;
+  	height: 31.5px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	padding: 3.5px 10.5px 3.5px 35px;
+}
+.buscar-productos-por {
+  	position: relative;
+}
+.container20 {
+  	width: 1104px;
+  	flex: 1;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 21px 21px 0px;
+  	box-sizing: border-box;
+  	font-size: 15.75px;
+  	color: #0a0a0a;
+}
+.container21 {
+  	align-self: stretch;
+  	height: 1063.5px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 14px;
+}
+.card5 {
+  	align-self: stretch;
+  	height: 93.8px;
+  	border-radius: 12.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 21px 0px 21px 21px;
+}
+.inventorymanagement7 {
+  	width: 1018px;
+  	flex: 1;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 0px;
+}
+.container22 {
+  	height: 49px;
+  	flex: 1;
+  	display: flex;
+  	align-items: center;
+  	gap: 14px;
+}
+.container-icon2 {
+  	height: 42px;
+  	width: 42px;
+  	border-radius: 8.75px;
+}
+.container23 {
+  	height: 49px;
+  	flex: 1;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 7px;
+}
+.container24 {
+  	align-self: stretch;
+  	height: 24.5px;
+  	display: flex;
+  	align-items: center;
+  	gap: 10.5px;
+}
+.heading-3 {
+  	height: 24.5px;
+  	width: 129.3px;
+  	position: relative;
+}
+.bolgrafo-bic-azul {
+  	position: absolute;
+  	top: -3px;
+  	left: 0px;
+  	line-height: 24.5px;
+}
+.dhanshree-stationery-e-commerc-badge {
+  	height: 19.5px;
+  	width: 57px;
+  	border-radius: 6.75px;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 1.8px 7px;
+  	font-size: 10.5px;
+}
+.container25 {
+  	align-self: stretch;
+  	height: 17.5px;
+  	display: flex;
+  	align-items: center;
+  	gap: 21px;
+  	font-size: 12.25px;
+  	color: #4a5565;
+}
+.text2 {
+  	height: 17.5px;
+  	width: 24.5px;
+  	position: relative;
+}
+.id-2 {
+  	position: absolute;
+  	top: -2px;
+  	left: 0px;
+  	line-height: 17.5px;
+  	display: inline-block;
+  	width: 25px;
+}
+.text3 {
+  	height: 17.5px;
+  	width: 131.2px;
+  	position: relative;
+}
+.cdigo-7891234567891 {
+  	position: absolute;
+  	top: -2px;
+  	left: 0px;
+  	line-height: 17.5px;
+  	display: inline-block;
+  	width: 132px;
+}
+.text4 {
+  	height: 17.5px;
+  	width: 35.1px;
+  	position: relative;
+  	color: #9810fa;
+}
+.b6 {
+  	position: absolute;
+  	top: -2px;
+  	left: 0px;
+  	line-height: 17.5px;
+  	display: inline-block;
+  	width: 36px;
+}
+.container26 {
+  	height: 49.8px;
+  	width: 323.4px;
+  	display: flex;
+  	align-items: center;
+  	gap: 14px;
+  	text-align: center;
+}
+.container27 {
+  	height: 49.8px;
+  	width: 66.9px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 5.8px;
+}
+.text5 {
+  	height: 24.5px;
+  	width: 18.1px;
+  	position: relative;
+}
+.badge2 {
+  	align-self: stretch;
+  	height: 19.5px;
+  	border-radius: 6.75px;
+  	background-color: #dcfce7;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 1.8px 7px;
+  	font-size: 10.5px;
+  	color: #008236;
+}
+.container29 {
+  	height: 28px;
+  	flex: 1;
+  	display: flex;
+  	align-items: center;
+  	gap: 7px;
+  	text-align: left;
+  	font-size: 12.25px;
+}
+.container30 {
+  	height: 28px;
+  	flex: 1;
+  	display: flex;
+  	align-items: center;
+  	gap: 3.5px;
+}
+.button8 {
+  	height: 28px;
+  	width: 27.9px;
+  	border-radius: 6.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0px 10.5px;
+}
+.dhanshree-stationery-e-commerc-input {
+  	height: 28px;
+  	flex: 1;
+  	border-radius: 6.75px;
+  	background-color: #f3f3f5;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	padding: 3.5px 10.5px;
+  	text-align: center;
+}
+.button9 {
+  	height: 28px;
+  	width: 31.5px;
+  	border-radius: 6.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 0px 10.5px;
+}
+.button10 {
+  	height: 28px;
+  	width: 74.5px;
+  	position: relative;
+  	border-radius: 6.75px;
+  	background-color: #fff;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+}
+.icon19 {
+  	position: absolute;
+  	top: 7px;
+  	left: 9.75px;
+  	width: 14px;
+  	height: 14px;
+}
+.editar {
+  	position: absolute;
+  	top: 3.25px;
+  	left: 32.5px;
+  	line-height: 17.5px;
+}
+.button-icon {
+  	height: 28px;
+  	width: 31.5px;
+  	border-radius: 6.75px;
+}
+.dhanshree-stationery-e-commerc-heading-3 {
+  	height: 24.5px;
+  	width: 175.2px;
+  	position: relative;
+}
+.badge3 {
+  	height: 19.5px;
+  	width: 75px;
+  	border-radius: 6.75px;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 1.8px 7px;
+  	font-size: 10.5px;
+}
+.text8 {
+  	height: 17.5px;
+  	width: 41.9px;
+  	position: relative;
+  	color: #9810fa;
+}
+.b8 {
+  	position: absolute;
+  	top: -2px;
+  	left: 0px;
+  	line-height: 17.5px;
+  	display: inline-block;
+  	width: 42px;
+}
+.text9 {
+  	height: 24.5px;
+  	width: 9.1px;
+  	position: relative;
+}
+.b9 {
+  	position: absolute;
+  	top: -3px;
+  	left: 1px;
+  	line-height: 24.5px;
+}
+.heading-32 {
+  	height: 24.5px;
+  	width: 209.9px;
+  	position: relative;
+}
+.badge5 {
+  	height: 19.5px;
+  	width: 35px;
+  	border-radius: 6.75px;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 1.8px 7px;
+  	font-size: 10.5px;
+}
+.text10 {
+  	height: 17.5px;
+  	width: 31.1px;
+  	position: relative;
+}
+.id-10 {
+  	position: absolute;
+  	top: -2px;
+  	left: 0px;
+  	line-height: 17.5px;
+  	display: inline-block;
+  	width: 32px;
+}
+.heading-33 {
+  	height: 24.5px;
+  	width: 226.1px;
+  	position: relative;
+}
+.badge7 {
+  	height: 19.5px;
+  	width: 65.3px;
+  	border-radius: 6.75px;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 1.8px 7px;
+  	font-size: 10.5px;
+}
+.text16 {
+  	height: 17.5px;
+  	width: 37px;
+  	position: relative;
+  	color: #9810fa;
+}
+.b12 {
+  	position: absolute;
+  	top: -2px;
+  	left: 0px;
+  	line-height: 17.5px;
+  	display: inline-block;
+  	width: 37px;
+}
+.heading-34 {
+  	height: 24.5px;
+  	width: 169px;
+  	position: relative;
+}
+.container62 {
+  	height: 49.8px;
+  	width: 322.1px;
+  	display: flex;
+  	align-items: center;
+  	gap: 14px;
+  	text-align: center;
+}
+.container63 {
+  	height: 49.8px;
+  	width: 65.6px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 5.8px;
+}
+.badge10 {
+  	align-self: stretch;
+  	height: 19.5px;
+  	border-radius: 6.75px;
+  	background-color: #fef9c2;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 1.8px 7px;
+  	font-size: 10.5px;
+  	color: #a65f00;
+}
+.heading-35 {
+  	height: 24.5px;
+  	width: 158.3px;
+  	position: relative;
+}
+.text24 {
+  	height: 17.5px;
+  	width: 30.2px;
+  	position: relative;
+  	color: #9810fa;
+}
+.b16 {
+  	position: absolute;
+  	top: -2px;
+  	left: 0px;
+  	line-height: 17.5px;
+  	display: inline-block;
+  	width: 31px;
+}
+.heading-36 {
+  	height: 24.5px;
+  	width: 163.7px;
+  	position: relative;
+}
+.text28 {
+  	height: 17.5px;
+  	width: 37.2px;
+  	position: relative;
+  	color: #9810fa;
+}
+.b18 {
+  	position: absolute;
+  	top: -2px;
+  	left: 0px;
+  	line-height: 17.5px;
+  	display: inline-block;
+  	width: 38px;
+}
+.heading-37 {
+  	height: 24.5px;
+  	width: 176.3px;
+  	position: relative;
+}
+.heading-38 {
+  	height: 24.5px;
+  	width: 183.2px;
+  	position: relative;
+}
+.badge17 {
+  	height: 19.5px;
+  	width: 40.7px;
+  	border-radius: 6.75px;
+  	border: 1px solid rgba(0, 0, 0, 0.1);
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 1.8px 7px;
+  	font-size: 10.5px;
+}
+.heading-39 {
+  	height: 24.5px;
+  	width: 135.4px;
+  	position: relative;
+}
+.section {
+  	width: 1104px;
+  	height: 0px;
+  	position: relative;
+}
+.text42 {
+  	position: absolute;
+  	top: -20000px;
+  	left: 0px;
+  	width: 75.5px;
+  	height: 18px;
+  	font-size: 12px;
+  	color: #0a0a0a;
+}
+.empleado-001 {
+  	position: absolute;
+  	top: -1px;
+  	left: 0px;
+  	line-height: 18px;
+}
+
