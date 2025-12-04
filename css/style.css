@@ -93,30 +93,25 @@ body {
 }
 
 .nav-right {
-
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
 .time-date-block {
-
     text-align: right;
 }
 
+/* Esta clase se usa ahora en el <summary>, se ajustará más abajo también */
 .user-info-block {
-
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
 .user-avatar-wrapper {
-
     position: relative;
 }
-
-
 
 .logo-icon-container {
     width: 36px;
@@ -208,6 +203,7 @@ body {
 .icon-xl { width: 20px; height: 20px; }
 
 
+/* --- FILTROS --- */
 .filter-section {
     width: 100%;
     background: white;
@@ -260,7 +256,7 @@ body {
     align-items: center;
     gap: 6px;
     transition: background-color 0.2s;
-    text-decoration: none; /* Añadido para enlaces */
+    text-decoration: none; 
 }
 .filter-button-new:hover {
     background: #860dda;
@@ -313,6 +309,7 @@ body {
     gap: 8px;
     cursor: pointer;
     min-width: 120px;
+    position: relative; /* Para dropdowns */
 }
 .filter-dropdown-button:hover {
     background: #E5E7EB;
@@ -321,7 +318,7 @@ body {
     color: #9CA3AF;
 }
 
-/* --- Estilos de .employee-card --- */
+/* --- EMPLEADOS (GRID) --- */
 .employee-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -406,6 +403,10 @@ body {
     background-color: #2563EB;
     color: white;
 }
+.card__tag--inactive {
+    background-color: #FEE2E2;
+    color: #DC2626;
+}
 .card__details {
     display: flex;
     flex-direction: column;
@@ -419,12 +420,11 @@ body {
     color: #4B5563;
     font-weight: 500;
 }
-
 .card__detail-item .icon-sm {
     color: #6B7280; 
 }
 
-/* Footer y Acciones */
+/* Footer y Acciones de Tarjeta */
 .card__divider {
     border-top: 1px solid #E5E7EB;
 }
@@ -466,7 +466,7 @@ body {
     padding: 4px; 
 }
 
-/* --- Media Queries  --- */
+/* --- Media Queries --- */
 @media (max-width: 1024px) {
     .employee-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -491,8 +491,6 @@ body {
         width: 100%;
         justify-content: center;
     }
-    
-    /* Añadidos para el header responsivo */
     .main-nav {
         flex-direction: column;
         align-items: flex-start;
@@ -504,9 +502,188 @@ body {
     }
     .nav-tabs-container {
         width: 100%;
-        overflow-x: auto; /* Para que los tabs no se rompan */
+        overflow-x: auto;
     }
     .main-content {
         padding: 16px;
     }
+}
+
+/* --------- MODAL (Compacto) --------- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal {
+    background: white;
+    padding: 20px 26px;
+    border-radius: 12px;
+    width: 380px; 
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.modal h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.modal form label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 8px;
+    color: #374151;
+}
+
+.modal form input,
+.modal form select {
+    width: 100%;
+    padding: 6px 10px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    background: #F9FAFB;
+}
+
+.modal form input:focus,
+.modal form select:focus {
+    outline: none;
+    border-color: #9810FA;
+    box-shadow: 0 0 0 2px rgba(152,16,250,0.25);
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-cerrar {
+    background: #E5E7EB;
+    color: #374151;
+}
+.btn-cerrar:hover {
+    background: #D1D5DB;
+}
+
+.btn-guardar {
+    background: #9810FA;
+    color: white;
+}
+.btn-guardar:hover {
+    background: #7d0ccf;
+}
+
+/* SELECT ESTILO BUTTON */
+.select-dropdown {
+    height: 36px;
+    padding: 0 12px;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    color: #374151;
+    font-size: 14px;
+    font-family: 'Arimo', sans-serif;
+    cursor: pointer;
+    min-width: 150px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../public/images/despliegue.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 14px;
+}
+.select-dropdown:hover {
+    background: #E5E7EB;
+}
+.select-dropdown option {
+    padding-right: 30px;
+}
+
+.filter-dropdown-select {
+    height: 36px;
+    padding: 0 12px;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    color: #374151;
+    font-size: 14px;
+    font-family: 'Arimo', sans-serif;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+/*(Logout) */
+
+.perfil-container {
+    position: relative;
+    display: inline-block;
+}
+
+summary.user-info-block {
+    cursor: pointer;
+    list-style: none; 
+    user-select: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* 3. El Menú Flotante */
+.menu-logout {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px; /* Espacio separador */
+    background: white;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    min-width: 160px; /* Ancho mínimo para que se vea bien */
+    width: 100%;      /* Intenta igualar al contenedor si es grande */
+    z-index: 1000;
+    padding: 4px;
+}
+
+/* El botón dentro del menú */
+.menu-logout a {
+    display: block;
+    padding: 10px 12px;
+    color: #dc3545; /* Rojo */
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.menu-logout a:hover {
+    background-color: #FEF2F2; /* Fondo rojo muy suave */
 }
