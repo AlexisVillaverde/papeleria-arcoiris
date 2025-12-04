@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Filtros Reportes</title>
+    <link rel="stylesheet" href="css/filtros-reportes.css">
+</head>
+<body>
+    <div id="filtros-reportes" style="background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h3>Filtros de Reportes</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div>
+                <label>Fecha Inicio:</label>
+                <input type="date" id="fecha-inicio" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div>
+                <label>Fecha Fin:</label>
+                <input type="date" id="fecha-fin" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div>
+                <label>Empleado:</label>
+                <select id="filtro-empleado" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                    <option value="">Todos los empleados</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

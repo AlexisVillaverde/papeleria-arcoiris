@@ -248,7 +248,8 @@ body {
     gap: 12px;
 }
 
-.button5, .button6, .button7 {
+.button5, .button6, .button7,
+button.button5, button.button6, button.button7 {
     background: #9810FA;
     color: white;
     border: none;
@@ -264,7 +265,8 @@ body {
     transition: background-color 0.2s;
 }
 
-.button5:hover, .button6:hover, .button7:hover {
+.button5:hover, .button6:hover, .button7:hover,
+button.button5:hover, button.button6:hover, button.button7:hover {
     background: #860dda;
 }
 

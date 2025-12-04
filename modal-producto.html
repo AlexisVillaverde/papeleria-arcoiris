@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Modal Producto</title>
+    <link rel="stylesheet" href="css/modal-producto.css">
+</head>
+<body>
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-titulo">Nuevo Producto</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form class="modal-form">
+                <input type="hidden" name="id" id="producto-id">
+                
+                <div class="form-group">
+                    <label>Nombre del producto:</label>
+                    <input type="text" name="nombre" id="producto-nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Código de Barras:</label>
+                    <input type="text" name="sku" id="producto-sku" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Categoría:</label>
+                    <select name="categoria" id="producto-categoria" required>
+                        <option value="">Seleccionar categoría</option>
+                        <option value="1">Escritura</option>
+                        <option value="2">Cuadernos</option>
+                        <option value="3">Oficina</option>
+                        <option value="4">Arte y Manualidades</option>
+                        <option value="5">Corte y Pegado</option>
+                        <option value="6">Calculadoras</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Stock:</label>
+                    <input type="number" name="stock" id="producto-stock" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Precio:</label>
+                    <input type="number" name="precio" id="producto-precio" step="0.01" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Descripción:</label>
+                    <textarea name="descripcion" id="producto-descripcion"></textarea>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn-save" id="btn-guardar">Crear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

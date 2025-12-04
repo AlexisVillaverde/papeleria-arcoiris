@@ -5,6 +5,7 @@
   	<meta name="viewport" content="initial-scale=1, width=device-width">
 	<title>Papeleria Arcoiris Inventario</title>
   	<link rel="stylesheet"  href="./css/Inventrario.css" />
+  	<link rel="stylesheet"  href="./css/toast.css" />
   	
   	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +23,8 @@
                         <img src="public/images/logo.svg" alt="Logo Papelería" class="logo-image">
                     </div>
                     <div>
-                        <div class="text-logo-title">Papelería Arcoíris</div>
-                        <div class="text-logo-subtitle">Sistema de Punto de Venta</div>
+                        <h1 class="text-logo-title">Papelería Arcoíris</h1>
+                        <p class="text-logo-subtitle">Sistema de Punto de Venta</p>
                     </div>
                 </a>
 
@@ -50,13 +51,13 @@
 
             <div class="nav-right">
                 <div class="time-date-block">
-                    <div class="text-time font-cousine">
+                    <time class="text-time font-cousine">
                         <img src="public/images/clock.svg" alt="Ícono Reloj" class="icon-sm">
                         <span>10:16 p.m.</span>
-                    </div>
-                    <div class="text-date">
+                    </time>
+                    <p class="text-date">
                         sábado, 25 de octubre de 2025
-                    </div>
+                    </p>
                 </div>
                 <div class="user-info-block">
                     <div class="user-avatar-wrapper">
@@ -64,8 +65,8 @@
                         <span class="user-status-dot"></span>
                     </div>
                     <div>
-                        <div class="text-user-name">Administrador Sistema</div>
-                        <div class="text-user-role">Administrador</div>
+                        <h3 class="text-user-name">Administrador Sistema</h3>
+                        <p class="text-user-role">Administrador</p>
                     </div>
                 </div>
             </div>
@@ -79,40 +80,40 @@
           					<div class="container8">
             						<div class="container9">
               							<img src="/public/images/boxWhite.svg" alt="">
-              							<div class="container10">
-                								<div class="dhanshree-stationery-e-commerc-heading-1">
-                  									<b class="gestin-de-inventario">Gestión de Inventario</b>
-                								</div>
-                								<div class="paragraph4">
-                  									<div class="administrador-sistema">Control de stock y productos</div>
-                								</div>
-              							</div>
+              							<header class="container10">
+                								<h1 class="dhanshree-stationery-e-commerc-heading-1">
+                  									<strong class="gestin-de-inventario">Gestión de Inventario</strong>
+                								</h1>
+                								<p class="paragraph4">
+                  									<span class="administrador-sistema">Control de stock y productos</span>
+                								</p>
+              							</header>
             						</div>
             						<div class="container11">
-              							<div class="button5">
+              							<button class="button5">
                 								<img src="/public/images/descarga.svg" alt="">
-                								<div class="importar">Importar</div>
-              							</div>
-              							<div class="button6">
+                								<span class="importar">Importar</span>
+              							</button>
+              							<button class="button6">
                 								<img src="/public/images/importar.svg" alt="">
-                								<div class="importar">Exportar</div>
-              							</div>
-              							<div class="button7">
+                								<span class="importar">Exportar</span>
+              							</button>
+              							<button class="button7">
                 								<img src="/public/images/cruz.svg" alt="">
-                								<div class="nuevo-producto">Nuevo Producto</div>
-              							</div>
+                								<span class="nuevo-producto">Nuevo Producto</span>
+              							</button>
             						</div>
           					</div>
           					<div class="container12">
             						<div class="card">
               							<div class="dhanshree-stationery-e-commerc-inventorymanagement">
                 								<div class="container13">
-                  									<div class="paragraph5">
-                    										<div class="sistema-de-punto">Total Productos</div>
-                  									</div>
-                  									<div class="paragraph6">
-                    										<b class="b">10</b>
-                  									</div>
+                  									<h3 class="paragraph5">
+                    										<span class="sistema-de-punto">Total Productos</span>
+                  									</h3>
+                  									<p class="paragraph6">
+                    										<strong class="b">10</strong>
+                  									</p>
                 								</div>
                 								<img src="/public/images/box.svg" alt="">
               							</div>
@@ -121,12 +122,12 @@
             						<div class="dhanshree-stationery-e-commerc-card">
               							<div class="dhanshree-stationery-e-commerc-inventorymanagement">
                 								<div class="container14">
-                  									<div class="paragraph5">
-                    										<div class="valor-total">Valor Total</div>
-                  									</div>
-                  									<div class="paragraph8">
-                    										<b class="dhanshree-stationery-e-commerc-b">$8,128</b>
-                  									</div>
+                  									<h3 class="paragraph5">
+                    										<span class="valor-total">Valor Total</span>
+                  									</h3>
+                  									<p class="paragraph8">
+                    										<strong class="dhanshree-stationery-e-commerc-b">$8,128</strong>
+                  									</p>
                 								</div>
                 								<img src="/public/images/stadiscVer.svg" alt="">
               							</div>
@@ -625,5 +626,6 @@
       			</div>
     		</div>
   	</div>
+    <script src="js/inventario.js"></script>
 </body>
 </html>

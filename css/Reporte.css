@@ -319,7 +319,10 @@ strong.b, strong.b2 {
     gap: 12px;
 }
 
-.button5, .button6 {
+.button5, .button6,
+button.button5, button.button6,
+button#btn-reporte-ventas, button#btn-productos-vendidos, 
+button#btn-inventario-bajo, button#btn-ventas-empleado {
     background: #9810FA;
     color: white;
     border: none;
@@ -335,7 +338,10 @@ strong.b, strong.b2 {
     transition: background-color 0.2s;
 }
 
-.button5:hover, .button6:hover {
+.button5:hover, .button6:hover,
+button.button5:hover, button.button6:hover,
+button#btn-reporte-ventas:hover, button#btn-productos-vendidos:hover,
+button#btn-inventario-bajo:hover, button#btn-ventas-empleado:hover {
     background: #860dda;
 }
 
@@ -419,14 +425,24 @@ strong.b, strong.b2 {
     margin-bottom: 24px;
 }
 
-.card5, .card6 {
+.card5, .card6,
+button.card5, button.card6 {
     flex: 1;
     background: white;
     border: 1px solid #E5E7EB;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    min-height: 300px;
+    min-height: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Arimo', sans-serif;
+}
+
+button.card5:hover, button.card6:hover {
+    background: #f8faff;
+    border-color: #667eea;
+    transform: translateY(-2px);
 }
 
 .cardtitle, .cardtitle2 {
