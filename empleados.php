@@ -62,7 +62,7 @@ $empleados = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <span>Punto de Venta</span>
                     </a>
 
-                    <a href="#" class="text-nav-item nav-tab-item nav-tab-item--active">
+                    <a href="empleados.php" class="text-nav-item nav-tab-item nav-tab-item--active">
                         <img src="public/images/empleados.svg" class="icon-sm">
                         <span>Empleados</span>
                         <span class="text-nav-badge nav-notification">●</span>
