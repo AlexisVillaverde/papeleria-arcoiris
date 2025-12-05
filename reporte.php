@@ -42,6 +42,59 @@ $ventas_recientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
+    
+    <style>
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .modal {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .btn-cerrar {
+            background: #6b7280;
+            color: white;
+        }
+        
+        .btn-guardar {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -255,10 +308,10 @@ $ventas_recientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">EMP-<?= str_pad($venta['id_empleado'], 3, '0', STR_PAD_LEFT) ?></span>
                                 </div>
                             </div>
-                            <a href="ver_venta.php?folio=<?= $venta['folio'] ?>" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 flex items-center gap-1">
+                            <button onclick="verVenta(<?= $venta['folio'] ?>)" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 flex items-center gap-1">
                                 <img src="public/images/vista.svg" class="icon-sm">
                                 Ver
-                            </a>
+                            </button>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -352,6 +405,177 @@ $ventas_recientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 return;
             }
             window.location.href = 'exportar_reporte.php?tipo=csv';
+        }
+        
+        function verVenta(folio) {
+            fetch(`obtener_venta.php?folio=${folio}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert('Error: ' + data.error);
+                        return;
+                    }
+                    mostrarModalVenta(data.venta, data.detalles);
+                })
+                .catch(error => {
+                    alert('Error al cargar la venta');
+                });
+        }
+        
+        function mostrarModalVenta(venta, detalles) {
+            let productosHtml = '';
+            detalles.forEach(detalle => {
+                productosHtml += `
+                    <div class="mb-2">
+                        <div class="flex justify-between">
+                            <span class="truncate pr-2">${(detalle.producto || 'PRODUCTO ELIMINADO').toUpperCase()}</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span>${detalle.cantidad} x $${parseFloat(detalle.precio_unitario).toFixed(2)}</span>
+                            <span>$${parseFloat(detalle.subtotal).toFixed(2)}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            const modalHtml = `
+                <div class="modal-overlay" onclick="cerrarModal(event)">
+                    <div class="modal" onclick="event.stopPropagation()" style="max-width: 400px; font-family: monospace; font-size: 14px;">
+                        <!-- Ticket de Venta -->
+                        <div class="bg-white border-2 border-dashed border-gray-400 p-6">
+                            <!-- Header del Ticket -->
+                            <div class="text-center mb-4 border-b border-dashed border-gray-400 pb-4">
+                                <h2 class="text-lg font-bold">PAPELERÍA ARCOÍRIS</h2>
+                                <p class="text-xs">Sistema de Punto de Venta</p>
+                                <p class="text-xs mt-2">TICKET DE VENTA</p>
+                            </div>
+
+                            <!-- Información de la Venta -->
+                            <div class="mb-4 text-xs space-y-1">
+                                <div class="flex justify-between">
+                                    <span>FOLIO:</span>
+                                    <span>${String(venta.folio).padStart(6, '0')}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>FECHA:</span>
+                                    <span>${new Date(venta.fecha_venta).toLocaleDateString('es-MX')} ${new Date(venta.fecha_venta).toLocaleTimeString('es-MX', {hour: '2-digit', minute: '2-digit'})}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>CAJERO:</span>
+                                    <span>${(venta.nombre + ' ' + venta.apellidos).toUpperCase()}</span>
+                                </div>
+                            </div>
+
+                            <!-- Línea separadora -->
+                            <div class="border-b border-dashed border-gray-400 mb-4"></div>
+
+                            <!-- Productos -->
+                            <div class="mb-4">
+                                <div class="text-xs font-bold mb-2">PRODUCTOS:</div>
+                                ${productosHtml}
+                            </div>
+
+                            <!-- Línea separadora -->
+                            <div class="border-b border-dashed border-gray-400 mb-4"></div>
+
+                            <!-- Totales -->
+                            <div class="text-xs space-y-1 mb-4">
+                                <div class="flex justify-between">
+                                    <span>SUBTOTAL:</span>
+                                    <span>$${parseFloat(venta.subtotal).toFixed(2)}</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>IVA (16%):</span>
+                                    <span>$${parseFloat(venta.iva).toFixed(2)}</span>
+                                </div>
+                                <div class="flex justify-between font-bold text-sm border-t border-dashed border-gray-400 pt-2">
+                                    <span>TOTAL:</span>
+                                    <span>$${parseFloat(venta.total).toFixed(2)}</span>
+                                </div>
+                            </div>
+
+                            <!-- Información de Pago -->
+                            <div class="text-xs space-y-1 mb-4">
+                                <div class="flex justify-between">
+                                    <span>MÉTODO PAGO:</span>
+                                    <span>${venta.metodo_pago.toUpperCase()}</span>
+                                </div>
+                                ${venta.monto_recibido ? `
+                                    <div class="flex justify-between">
+                                        <span>RECIBIDO:</span>
+                                        <span>$${parseFloat(venta.monto_recibido).toFixed(2)}</span>
+                                    </div>
+                                ` : ''}
+                                ${venta.cambio ? `
+                                    <div class="flex justify-between">
+                                        <span>CAMBIO:</span>
+                                        <span>$${parseFloat(venta.cambio).toFixed(2)}</span>
+                                    </div>
+                                ` : ''}
+                            </div>
+
+                            <!-- Footer del Ticket -->
+                            <div class="text-center text-xs border-t border-dashed border-gray-400 pt-4">
+                                <p>¡GRACIAS POR SU COMPRA!</p>
+                                <p class="mt-2">Conserve su ticket</p>
+                                <p class="mt-1">www.papeleria-arcoiris.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-buttons mt-4">
+                            <button type="button" class="btn btn-cerrar" onclick="cerrarModal()">Cerrar</button>
+                            <button type="button" class="btn btn-guardar" onclick="imprimirTicket()">Imprimir</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+        }
+        
+        function cerrarModal(event) {
+            if (event && event.target !== event.currentTarget) return;
+            document.querySelector('.modal-overlay')?.remove();
+        }
+        
+        function imprimirTicket() {
+            const ticketContent = document.querySelector('.modal .bg-white').innerHTML;
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Ticket de Venta</title>
+                        <style>
+                            body { font-family: monospace; font-size: 12px; margin: 0; padding: 20px; }
+                            .border-dashed { border-style: dashed; }
+                            .border-b { border-bottom-width: 1px; }
+                            .border-t { border-top-width: 1px; }
+                            .border-gray-400 { border-color: #9ca3af; }
+                            .text-center { text-align: center; }
+                            .text-xs { font-size: 10px; }
+                            .text-sm { font-size: 12px; }
+                            .text-lg { font-size: 16px; }
+                            .font-bold { font-weight: bold; }
+                            .mb-2 { margin-bottom: 8px; }
+                            .mb-4 { margin-bottom: 16px; }
+                            .mt-1 { margin-top: 4px; }
+                            .mt-2 { margin-top: 8px; }
+                            .pb-4 { padding-bottom: 16px; }
+                            .pt-2 { padding-top: 8px; }
+                            .pt-4 { padding-top: 16px; }
+                            .pr-2 { padding-right: 8px; }
+                            .space-y-1 > * + * { margin-top: 4px; }
+                            .flex { display: flex; }
+                            .justify-between { justify-content: space-between; }
+                            .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+                        </style>
+                    </head>
+                    <body>${ticketContent}</body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+            printWindow.close();
         }
     </script>
 </body>
