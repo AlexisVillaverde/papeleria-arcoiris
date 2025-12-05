@@ -40,8 +40,8 @@ $ventas_recientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papeleria Arcoiris - Reportes</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/Reporte.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,270 +113,205 @@ $ventas_recientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </nav>
     </header>
 
-    <div class="dhanshree-stationery-e-commerc">
-        <div class="app">
-            <div class="salesreports">
-                <div class="container7">
-                    <div class="container8">
-                        <div class="container9">
-                            <img src="/public/images/boxWhite.svg" alt="">
-                            <div class="container10">
-                                <h1 class="dhanshree-stationery-e-commerc-heading-1">
-                                    <span class="reportes-de-ventas">Reportes de Ventas</span>
-                                </h1>
-                                <p class="paragraph4">
-                                    <span class="administrador-sistema">Análisis y estadísticas de ventas</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="container11">
-                            <button type="button" class="button5" onclick="generarReporte()">
-                                <img src="/public/images/descarga.svg" alt="">
-                                <div class="exportar-pdf">Generar Reporte</div>
-                            </button>
-                            <button type="button" class="button6" onclick="exportarExcel()">
-                                <img src="/public/images/importar.svg" alt="">
-                                <div class="exportar-pdf">Exportar Excel</div>
-                            </button>
-                        </div>
+    <main class="main-content">
+        <section class="filter-section">
+            <div class="filter-header">
+                <div class="filter-title-group">
+                    <div class="filter-icon-wrapper">
+                        <img src="public/images/stadistic.svg" class="icon-lg">
                     </div>
-
-                    <div class="container12">
-                        <div class="container13">
-                            <img src="/public/images/filtro.svg" alt="">
-                            <div class="text2">
-                                <div class="sistema-de-punto">Filtros:</div>
-                            </div>
-                        </div>
-                        <div class="primitivebutton">
-                            <div class="dhanshree-stationery-e-commerc-primitivespan">
-                                <input type="date" id="fecha-inicio" min="2020-01-01" max="2030-12-31" title="Seleccione fecha de inicio" style="border: none; background: transparent; color: inherit;">
-                            </div>
-                            <img src="/public/images/despliegue.svg" alt="">
-                        </div>
-                        <div class="dhanshree-stationery-e-commerc-primitivebutton">
-                            <div class="primitivespan2">
-                                <input type="date" id="fecha-fin" min="2020-01-01" max="2030-12-31" title="Seleccione fecha fin" style="border: none; background: transparent; color: inherit;">
-                            </div>
-                            <img src="/public/images/despliegue.svg" alt="">
-                        </div>
-                        <div class="dhanshree-stationery-e-commerc-primitivebutton">
-                            <div class="primitivespan2">
-                                <select id="filtro-empleado" style="border: none; background: transparent; color: inherit; width: 100%;">
-                                    <option value="">Seleccionar empleado</option>
-                                    <?php foreach ($empleados as $emp): ?>
-                                        <option value="<?= $emp['id_empleado'] ?>"><?= $emp['nombre'] . ' ' . $emp['apellidos'] ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-                            <img src="/public/images/despliegue.svg" alt="">
-                        </div>
+                    <div>
+                        <h1 class="filter-title">Reportes de Ventas</h1>
+                        <p class="filter-subtitle">Análisis y estadísticas de ventas</p>
                     </div>
                 </div>
 
-                <div class="container14">
-                    <div class="container15">
-                        <div class="card">
-                            <div class="dhanshree-stationery-e-commerc-salesreports">
-                                <div class="container16">
-                                    <div class="paragraph5">
-                                        <div class="sistema-de-punto">Total Ventas</div>
-                                    </div>
-                                    <div class="paragraph6">
-                                        <b class="b"><?= $stats['total_ventas'] ?></b>
-                                    </div>
-                                </div>
-                                <img src="/public/images/punto-venta.svg" alt="">
-                            </div>
-                        </div>
-
-                        <div class="dhanshree-stationery-e-commerc-card">
-                            <div class="dhanshree-stationery-e-commerc-salesreports">
-                                <div class="container17">
-                                    <div class="paragraph5">
-                                        <div class="sistema-de-punto">Ingresos Totales</div>
-                                    </div>
-                                    <div class="paragraph8">
-                                        <b class="dhanshree-stationery-e-commerc-b">$<?= number_format($stats['ingresos_totales'], 2) ?></b>
-                                    </div>
-                                </div>
-                                <img src="/public/images/dinero.svg" alt="">
-                            </div>
-                        </div>
-
-                        <div class="card2">
-                            <div class="dhanshree-stationery-e-commerc-salesreports">
-                                <div class="container18">
-                                    <div class="paragraph5">
-                                        <div class="sistema-de-punto">Venta Promedio</div>
-                                    </div>
-                                    <div class="paragraph8">
-                                        <b class="b2">$<?= number_format($stats['venta_promedio'], 0) ?></b>
-                                    </div>
-                                </div>
-                                <img src="/public/images/flechaMo.svg" alt="">
-                            </div>
-                        </div>
-
-                        <div class="card3">
-                            <div class="dhanshree-stationery-e-commerc-salesreports">
-                                <div class="container19">
-                                    <div class="paragraph5">
-                                        <div class="sistema-de-punto">IVA Recaudado</div>
-                                    </div>
-                                    <div class="paragraph8">
-                                        <b class="b2">$<?= number_format($stats['iva_recaudado'], 0) ?></b>
-                                    </div>
-                                </div>
-                                <img src="/public/images/calendario.svg" alt="">
-                            </div>
-                        </div>
-
-                        <div class="card4">
-                            <div class="dhanshree-stationery-e-commerc-salesreports">
-                                <div class="container20">
-                                    <div class="paragraph5">
-                                        <div class="sistema-de-punto">Items Vendidos</div>
-                                    </div>
-                                    <div class="paragraph6">
-                                        <b class="b"><?= $stats['items_vendidos'] ?></b>
-                                    </div>
-                                </div>
-                                <img src="/public/images/box.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container21">
-                        <div class="card5">
-                            <div class="cardtitle">
-                                <div class="ventas-por-da">Ventas por Día</div>
-                            </div>
-                            <div class="cardcontent">
-                                <div id="grafico-ventas-dia" style="height: 200px; display: flex; align-items: center; justify-content: center; color: #666;">
-                                    Gráfico de ventas por día
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card6">
-                            <div class="cardtitle">
-                                <div class="ventas-por-da">Métodos de Pago</div>
-                            </div>
-                            <div class="dhanshree-stationery-e-commerc-cardcontent">
-                                <div id="grafico-metodos-pago" style="height: 200px; display: flex; align-items: center; justify-content: center; color: #666;">
-                                    Gráfico de métodos de pago
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card7">
-                        <div class="cardtitle2">
-                            <div class="ventas-por-da">Rendimiento por Empleado</div>
-                        </div>
-                        <div class="cardcontent2">
-                            <div id="grafico-empleados" style="height: 200px; display: flex; align-items: center; justify-content: center; color: #666;">
-                                Gráfico de rendimiento por empleado
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card8">
-                        <div class="cardtitle3">
-                            <div class="salesreports6">
-                                <div class="ventas-por-da">Ventas Recientes</div>
-                            </div>
-                            <div class="dhanshree-stationery-e-commerc-badge">
-                                <div class="div"><?= count($ventas_recientes) ?> registros</div>
-                            </div>
-                        </div>
-                        <div class="salesreports7">
-                            <?php foreach ($ventas_recientes as $venta): ?>
-                                <div class="container22">
-                                    <div class="container23">
-                                        <img src="/public/images/carroMo.svg" alt="">
-                                        <div class="container24">
-                                            <div class="paragraph2">
-                                                <div class="administrador-sistema"><?= $venta['codigo_venta'] ?></div>
-                                            </div>
-                                            <div class="paragraph19">
-                                                <div class="dhanshree-stationery-e-commerc-pm"><?= date('d/m/Y - g:i:s A', strtotime($venta['fecha_venta'])) ?></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="container25">
-                                        <div class="container26">
-                                            <div class="paragraph2">
-                                                <b class="b5">$<?= number_format($venta['total'], 2) ?></b>
-                                            </div>
-                                            <div class="container27">
-                                                <div class="badge2">
-                                                    <div class="div"><?= ucfirst($venta['metodo_pago']) ?></div>
-                                                </div>
-                                                <div class="badge3">
-                                                    <div class="div">EMP-<?= str_pad($venta['id_empleado'], 3, '0', STR_PAD_LEFT) ?></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="button7">
-                                            <img src="/public/images/vista.svg" alt="">
-                                            <div class="ver">Ver</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-
-                    <!-- Área de Resultados de Reportes -->
-                    <div id="resultado-reportes" style="background: white; padding: 20px; margin: 20px 0; border-radius: 8px; min-height: 200px;">
-                        <?php if (isset($_GET['reporte_generado']) && isset($_SESSION['reporte_resultados'])): ?>
-                            <h3>Resultados del Reporte</h3>
-                            <?php if (!empty($_SESSION['reporte_estadisticas'])): ?>
-                                <div style="display: flex; gap: 20px; margin-bottom: 20px;">
-                                    <div><strong>Total Ventas:</strong> <?= $_SESSION['reporte_estadisticas']['total_ventas'] ?></div>
-                                    <div><strong>Ingresos:</strong> $<?= number_format($_SESSION['reporte_estadisticas']['total_ingresos'], 2) ?></div>
-                                    <div><strong>Promedio:</strong> $<?= number_format($_SESSION['reporte_estadisticas']['promedio_venta'], 2) ?></div>
-                                </div>
-                            <?php endif; ?>
-                            
-                            <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
-                                <thead>
-                                    <tr style="background: #f5f5f5;">
-                                        <th style="padding: 10px; border: 1px solid #ddd;">Código</th>
-                                        <th style="padding: 10px; border: 1px solid #ddd;">Fecha</th>
-                                        <th style="padding: 10px; border: 1px solid #ddd;">Total</th>
-                                        <th style="padding: 10px; border: 1px solid #ddd;">Método Pago</th>
-                                        <th style="padding: 10px; border: 1px solid #ddd;">Empleado</th>
-                                        <th style="padding: 10px; border: 1px solid #ddd;">Items</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($_SESSION['reporte_resultados'] as $venta): ?>
-                                        <tr>
-                                            <td style="padding: 8px; border: 1px solid #ddd;"><?= $venta['codigo_venta'] ?></td>
-                                            <td style="padding: 8px; border: 1px solid #ddd;"><?= date('d/m/Y H:i', strtotime($venta['fecha_venta'])) ?></td>
-                                            <td style="padding: 8px; border: 1px solid #ddd;">$<?= number_format($venta['total'], 2) ?></td>
-                                            <td style="padding: 8px; border: 1px solid #ddd;"><?= ucfirst($venta['metodo_pago']) ?></td>
-                                            <td style="padding: 8px; border: 1px solid #ddd;"><?= $venta['empleado'] ?></td>
-                                            <td style="padding: 8px; border: 1px solid #ddd;"><?= $venta['items_vendidos'] ?></td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                        <?php elseif (isset($_GET['error'])): ?>
-                            <div style="color: red; padding: 10px; background: #ffe6e6; border-radius: 5px;">
-                                Error: <?= htmlspecialchars($_GET['error']) ?>
-                            </div>
-                        <?php else: ?>
-                            <p style="text-align: center; color: #666;">Seleccione filtros y haga clic en "Generar Reporte" para ver los resultados</p>
-                        <?php endif; ?>
-                    </div>
+                <div class="flex gap-3">
+                    <button type="button" class="filter-button-new" onclick="generarReporte()">
+                        <img src="public/images/descarga.svg" class="icon-sm">
+                        <span>Generar Reporte</span>
+                    </button>
+                    <button type="button" class="filter-button-new" onclick="exportarExcel()" style="background: #10b981;">
+                        <img src="public/images/importar.svg" class="icon-sm">
+                        <span>Exportar Excel</span>
+                    </button>
                 </div>
             </div>
-        </div>
-    </div>
+
+            <div class="filter-controls">
+                <div class="filter-search-wrapper">
+                    <img src="public/images/filtro.svg" class="filter-search-icon icon-sm">
+                    <span class="text-sm text-gray-600">Filtros:</span>
+                </div>
+
+                <input type="date" id="fecha-inicio" min="2020-01-01" max="2030-12-31" title="Seleccione fecha de inicio" class="select-dropdown">
+                
+                <input type="date" id="fecha-fin" min="2020-01-01" max="2030-12-31" title="Seleccione fecha fin" class="select-dropdown">
+                
+                <select id="filtro-empleado" class="filter-dropdown-select">
+                    <option value="">Seleccionar empleado</option>
+                    <?php foreach ($empleados as $emp): ?>
+                        <option value="<?= $emp['id_empleado'] ?>"><?= $emp['nombre'] . ' ' . $emp['apellidos'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
+            <div class="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-sm text-gray-600">Total Ventas</p>
+                        <p class="text-2xl font-bold text-gray-900"><?= $stats['total_ventas'] ?></p>
+                    </div>
+                    <img src="public/images/punto-venta.svg" class="icon-xl">
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-sm text-gray-600">Ingresos Totales</p>
+                        <p class="text-2xl font-bold text-gray-900">$<?= number_format($stats['ingresos_totales'], 2) ?></p>
+                    </div>
+                    <img src="public/images/dinero.svg" class="icon-xl">
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-sm text-gray-600">Venta Promedio</p>
+                        <p class="text-2xl font-bold text-gray-900">$<?= number_format($stats['venta_promedio'], 0) ?></p>
+                    </div>
+                    <img src="public/images/flechaMo.svg" class="icon-xl">
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-sm text-gray-600">IVA Recaudado</p>
+                        <p class="text-2xl font-bold text-gray-900">$<?= number_format($stats['iva_recaudado'], 0) ?></p>
+                    </div>
+                    <img src="public/images/calendario.svg" class="icon-xl">
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-sm text-gray-600">Items Vendidos</p>
+                        <p class="text-2xl font-bold text-gray-900"><?= $stats['items_vendidos'] ?></p>
+                    </div>
+                    <img src="public/images/box.svg" class="icon-xl">
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <div class="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Ventas por Día</h3>
+                <div id="grafico-ventas-dia" class="h-48 flex items-center justify-center text-gray-500">
+                    Gráfico de ventas por día
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Métodos de Pago</h3>
+                <div id="grafico-metodos-pago" class="h-48 flex items-center justify-center text-gray-500">
+                    Gráfico de métodos de pago
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg border border-gray-200 p-6 shadow-sm mb-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Rendimiento por Empleado</h3>
+            <div id="grafico-empleados" class="h-64 flex items-center justify-center text-gray-500">
+                Gráfico de rendimiento por empleado
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg border border-gray-200 p-6 shadow-sm mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold text-gray-900">Ventas Recientes</h3>
+                <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-sm"><?= count($ventas_recientes) ?> registros</span>
+            </div>
+            <div class="space-y-3">
+                <?php foreach ($ventas_recientes as $venta): ?>
+                    <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                        <div class="flex items-center gap-3">
+                            <img src="public/images/carroMo.svg" class="icon-lg">
+                            <div>
+                                <p class="font-semibold text-gray-900">FOLIO-<?= str_pad($venta['folio'], 4, '0', STR_PAD_LEFT) ?></p>
+                                <p class="text-sm text-gray-600"><?= date('d/m/Y - g:i:s A', strtotime($venta['fecha_venta'])) ?></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="text-right">
+                                <p class="font-semibold text-gray-900">$<?= number_format($venta['total'], 2) ?></p>
+                                <div class="flex gap-2 mt-1">
+                                    <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs"><?= ucfirst($venta['metodo_pago']) ?></span>
+                                    <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">EMP-<?= str_pad($venta['id_empleado'], 3, '0', STR_PAD_LEFT) ?></span>
+                                </div>
+                            </div>
+                            <a href="ver_venta.php?folio=<?= $venta['folio'] ?>" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 flex items-center gap-1">
+                                <img src="public/images/vista.svg" class="icon-sm">
+                                Ver
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </section>
+
+        <!-- Área de Resultados de Reportes -->
+        <section id="resultado-reportes" class="bg-white rounded-lg border border-gray-200 p-6 shadow-sm min-h-48">
+            <?php if (isset($_GET['reporte_generado']) && isset($_SESSION['reporte_resultados'])): ?>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Resultados del Reporte</h3>
+                <?php if (!empty($_SESSION['reporte_estadisticas'])): ?>
+                    <div class="flex flex-wrap gap-6 mb-6 p-4 bg-gray-50 rounded-lg">
+                        <div><strong>Total Ventas:</strong> <?= $_SESSION['reporte_estadisticas']['total_ventas'] ?></div>
+                        <div><strong>Ingresos:</strong> $<?= number_format($_SESSION['reporte_estadisticas']['total_ingresos'], 2) ?></div>
+                        <div><strong>Promedio:</strong> $<?= number_format($_SESSION['reporte_estadisticas']['promedio_venta'], 2) ?></div>
+                    </div>
+                <?php endif; ?>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="p-3 border border-gray-300 text-left">Código</th>
+                                <th class="p-3 border border-gray-300 text-left">Fecha</th>
+                                <th class="p-3 border border-gray-300 text-left">Total</th>
+                                <th class="p-3 border border-gray-300 text-left">Método Pago</th>
+                                <th class="p-3 border border-gray-300 text-left">Empleado</th>
+                                <th class="p-3 border border-gray-300 text-left">Items</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($_SESSION['reporte_resultados'] as $venta): ?>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-2 border border-gray-300"><?= $venta['codigo_venta'] ?></td>
+                                    <td class="p-2 border border-gray-300"><?= date('d/m/Y H:i', strtotime($venta['fecha_venta'])) ?></td>
+                                    <td class="p-2 border border-gray-300">$<?= number_format($venta['total'], 2) ?></td>
+                                    <td class="p-2 border border-gray-300"><?= ucfirst($venta['metodo_pago']) ?></td>
+                                    <td class="p-2 border border-gray-300"><?= $venta['empleado'] ?></td>
+                                    <td class="p-2 border border-gray-300"><?= $venta['items_vendidos'] ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            <?php elseif (isset($_GET['error'])): ?>
+                <div class="text-red-700 p-4 bg-red-100 border border-red-300 rounded-lg">
+                    Error: <?= htmlspecialchars($_GET['error']) ?>
+                </div>
+            <?php else: ?>
+                <p class="text-center text-gray-600">Seleccione filtros y haga clic en "Generar Reporte" para ver los resultados</p>
+            <?php endif; ?>
+        </section>
+    </main>
 
     <script>
         function generarReporte() {
